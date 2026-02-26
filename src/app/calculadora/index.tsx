@@ -1,6 +1,7 @@
 import React from "react";
 import { TextInput, View } from "react-native";
-import ButtonsOperations from "../components/ButtonsOperations";
+import ButtonsOperations from "../../components/ButtonsOperations";
+import styles from './style';
 
 
 export default function Index() {
