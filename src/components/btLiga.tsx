@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button, Linking } from 'react-native';
 
 export default function Tela() {

@@ -1,10 +1,11 @@
 import React from "react";
-import { StyleSheet, TextInput, View } from "react-native";
-import LayoutBotoes from './layoutBotoes';
+import { TextInput, View } from "react-native";
+import ButtonsOperations from "../components/ButtonsOperations";
+
 
 export default function Index() {
     
-    const [operacao, setOperacao] = React.useState("");  // Initialize as empty string
+    const [operacao, setOperacao] = React.useState("");  
     const [resultado, setResultado] = React.useState("");
 
     const operar = () => {
@@ -29,7 +30,7 @@ export default function Index() {
                 editable={false}
             />            
                         <View style={{marginTop: 16}}>
-                                <LayoutBotoes
+                                <ButtonsOperations
                                     onInsert={(s) => setOperacao(prev => prev + s)}
                                     onEvaluate={operar}
                                     onClear={() => {setOperacao(""); setResultado("");}}
@@ -41,24 +42,6 @@ export default function Index() {
     )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: "#17181A",
-        padding: 20,
-        flex: 1,
-        justifyContent: "flex-end",
-    
-    },
-    display: {
-        color: "white",
-        //flex: 1,
-        fontSize: 24,
-        textAlign: "right",
-        paddingHorizontal: 0,
-        paddingVertical: 5,
 
-    }   
-    
-});
 
 
